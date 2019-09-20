@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Form} from "react-bootstrap";
+import "../common/Common";
+import "../css/Obfuscator.css";
 
 class Obfuscator extends Component {
 
@@ -23,14 +25,19 @@ class Obfuscator extends Component {
     return (
       <Form>
       <Form.Group controlId="exampleForm.ControlInput1">
-        <Form.Label>Text for obfuscate</Form.Label>
-        <Form.Control placeholder="empty..." value={this.state.inputText} onChange={this.handleChange}/>
-        <Button onClick={this.obfuscateText}>Obfuscate</Button>
+        <Form.Label className="obf-title">Text for obfuscate</Form.Label>
+        <Form.Control
+          placeholder="empty..."
+          value={this.state.inputText}
+          onChange={this.handleChange}
+          className="text"
+        />
+        <Button onClick={this.obfuscateText} className="obf-btn">Obfuscate</Button>
       </Form.Group>
 
       <Form.Group controlId="exampleForm.ControlOutput">
-        <Form.Label>Obfuscated text</Form.Label>
-        <Form.Control placeholder="empty..." value={this.state.outputText}/>
+        <Form.Label className="obf-title">Obfuscated text</Form.Label>
+        <Form.Control placeholder="empty..." value={this.state.outputText} className="obf-text"/>
       </Form.Group>
     </Form>
     )

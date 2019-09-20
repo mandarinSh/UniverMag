@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Form} from "react-bootstrap";
+import "../common/Common";
+import "../css/Obfuscator.css";
 
 class Deobfuscator extends Component {
 
@@ -21,16 +23,21 @@ class Deobfuscator extends Component {
 
   render() {
     return (
-      <Form>
+      <Form className="deobf">
       <Form.Group controlId="exampleForm.ControlInput1">
-        <Form.Label>Text for deobfuscate</Form.Label>
-        <Form.Control placeholder="empty..." value={this.state.inputText} onChange={this.handleChange}/>
-        <Button onClick={this.deobfuscateText}>Deobfuscate</Button>
+        <Form.Label className="obf-title">Text for deobfuscate</Form.Label>
+        <Form.Control
+          placeholder="empty..."
+          value={this.state.inputText}
+          onChange={this.handleChange}
+          className="text"
+        />
+        <Button onClick={this.deobfuscateText} className="obf-btn">Deobfuscate</Button>
       </Form.Group>
 
       <Form.Group controlId="exampleForm.ControlOutput">
-        <Form.Label>Deobfuscated text</Form.Label>
-        <Form.Control placeholder="empty..." value={this.state.outputText}/>
+        <Form.Label className="obf-title">Deobfuscated text</Form.Label>
+        <Form.Control placeholder="empty..." value={this.state.outputText} className="text"/>
       </Form.Group>
     </Form>
     )
