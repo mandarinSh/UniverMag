@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Form} from "react-bootstrap";
 
-class Obfuscator extends Component {
+class Deobfuscator extends Component {
 
   constructor(props) {
     super(props);
@@ -11,8 +11,8 @@ class Obfuscator extends Component {
     }
   }
 
-  obfuscateText = () => {
-    this.setState({outputText: this.state.inputText.toString().obfs(100)});
+  deobfuscateText = () => {
+    this.setState({outputText: this.state.inputText.toString().deobfs(100)});
   };
 
   handleChange = (e) => {
@@ -23,13 +23,13 @@ class Obfuscator extends Component {
     return (
       <Form>
       <Form.Group controlId="exampleForm.ControlInput1">
-        <Form.Label>Text for obfuscate</Form.Label>
+        <Form.Label>Text for deobfuscate</Form.Label>
         <Form.Control placeholder="empty..." value={this.state.inputText} onChange={this.handleChange}/>
-        <Button onClick={this.obfuscateText}>Obfuscate</Button>
+        <Button onClick={this.deobfuscateText}>Deobfuscate</Button>
       </Form.Group>
 
       <Form.Group controlId="exampleForm.ControlOutput">
-        <Form.Label>Obfuscated text</Form.Label>
+        <Form.Label>Deobfuscated text</Form.Label>
         <Form.Control placeholder="empty..." value={this.state.outputText}/>
       </Form.Group>
     </Form>
@@ -37,4 +37,4 @@ class Obfuscator extends Component {
   }
 }
 
-export default Obfuscator;
+export default Deobfuscator;
