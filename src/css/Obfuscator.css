@@ -1,0 +1,16 @@
+.obf-text, .text {
+    height: 100px;
+    width: 800px;
+}
+
+.obf-title {
+    display: flex;
+}
+
+.deobf {
+    margin-top: 50px;
+}
+
+.obf-btn {
+    margin-top: 10px;
+}

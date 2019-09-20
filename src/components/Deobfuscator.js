@@ -3,7 +3,7 @@ import {Button, Form} from "react-bootstrap";
 import "../common/Common";
 import "../css/Obfuscator.css";
 
-class Obfuscator extends Component {
+class Deobfuscator extends Component {
 
   constructor(props) {
     super(props);
@@ -13,8 +13,8 @@ class Obfuscator extends Component {
     }
   }
 
-  obfuscateText = () => {
-    this.setState({outputText: this.state.inputText.toString().obfs(100)});
+  deobfuscateText = () => {
+    this.setState({outputText: this.state.inputText.toString().deobfs(100)});
   };
 
   handleChange = (e) => {
@@ -23,25 +23,25 @@ class Obfuscator extends Component {
 
   render() {
     return (
-      <Form>
+      <Form className="deobf">
       <Form.Group controlId="exampleForm.ControlInput1">
-        <Form.Label className="obf-title">Text for obfuscate</Form.Label>
+        <Form.Label className="obf-title">Text for deobfuscate</Form.Label>
         <Form.Control
           placeholder="empty..."
           value={this.state.inputText}
           onChange={this.handleChange}
           className="text"
         />
-        <Button onClick={this.obfuscateText} className="obf-btn">Obfuscate</Button>
+        <Button onClick={this.deobfuscateText} className="obf-btn">Deobfuscate</Button>
       </Form.Group>
 
       <Form.Group controlId="exampleForm.ControlOutput">
-        <Form.Label className="obf-title">Obfuscated text</Form.Label>
-        <Form.Control placeholder="empty..." value={this.state.outputText} className="obf-text"/>
+        <Form.Label className="obf-title">Deobfuscated text</Form.Label>
+        <Form.Control placeholder="empty..." value={this.state.outputText} className="text"/>
       </Form.Group>
     </Form>
     )
   }
 }
 
-export default Obfuscator;
+export default Deobfuscator;
