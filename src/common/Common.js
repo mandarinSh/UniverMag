@@ -1,4 +1,3 @@
-
 String.prototype.obfs = function(key, n = 126) {
   let charArray = this.toString().split('');
 
