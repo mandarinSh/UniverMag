@@ -31,13 +31,23 @@ class Deobfuscator extends Component {
           value={this.state.inputText}
           onChange={this.handleChange}
           className="text"
+          automationid="text-for-deobf"
         />
-        <Button onClick={this.deobfuscateText} className="obf-btn">Deobfuscate</Button>
+        <Button
+          onClick={this.deobfuscateText}
+          className="obf-btn"
+          automationid="deobf-btn"
+        >Deobfuscate</Button>
       </Form.Group>
 
       <Form.Group controlId="exampleForm.ControlOutput">
         <Form.Label className="obf-title">Deobfuscated text</Form.Label>
-        <Form.Control placeholder="empty..." value={this.state.outputText} className="text"/>
+        <Form.Control
+          placeholder="empty..."
+          value={this.state.outputText}
+          className="text"
+          automationid="deobf-text"
+        />
       </Form.Group>
     </Form>
     )

@@ -31,13 +31,23 @@ class Obfuscator extends Component {
           value={this.state.inputText}
           onChange={this.handleChange}
           className="text"
+          automationid="text"
         />
-        <Button onClick={this.obfuscateText} className="obf-btn">Obfuscate</Button>
+        <Button
+          onClick={this.obfuscateText}
+          className="obf-btn"
+          automationid="obf-btn"
+        >Obfuscate</Button>
       </Form.Group>
 
       <Form.Group controlId="exampleForm.ControlOutput">
         <Form.Label className="obf-title">Obfuscated text</Form.Label>
-        <Form.Control placeholder="empty..." value={this.state.outputText} className="obf-text"/>
+        <Form.Control
+          placeholder="empty..."
+          value={this.state.outputText}
+          className="obf-text"
+          automationid="obf-text"
+        />
       </Form.Group>
     </Form>
     )

@@ -4,6 +4,9 @@
 
 ### 1. Program for data obfuscation and deobfuscation.
 
+To run program type ```npm start```.
+ You will need to install all dependencies. To do it type ```npm install```.
+
 ### 2. Creating program for demonstration of testing encryption scenarios using standart libraries: 
 
 - BouncyCastle
