@@ -4,22 +4,16 @@
 
 ### 1. Program for data obfuscation and deobfuscation.
 
-To run program type ```npm start```.
- You will need to install all dependencies. To do it type ```npm install```.
+ To run the application type
+ ### `npm start`
 
-### 2. Creating program for demonstration of testing encryption scenarios using standart libraries: 
-
-- BouncyCastle
-- SafeNet
-- KeySecure
-- Gemalto
-- SunJCE
-
-
-### 3. Design and implementation of client-server application interacting via HTTPS protocol using encryption keys for SSL/TLS (Two-Way TLS)
-
-
-### 4. Creating router for client-server application working through Gateway using Netflix Zuul library.
+ You will need to install all dependencies by the following command
+ ### `npm install`
+ 
+ To run acceptance tests go to `tests` directory and type the following commands. Make sure that app is running.
+ 
+ ### `testcafe chrome ObfuscatorTest.js`
+ ### `testcafe chrome DeobfuscatorTest.js`
 
 
 ## Available Scripts
