@@ -1,12 +1,12 @@
 import { Selector } from 'testcafe'; // first import testcafe selectors
 import { ReactSelector } from 'testcafe-react-selectors';
 
-fixture `Getting Started`// declare the fixture
+fixture `Deobfuscator test`// declare the fixture
   .page `http://localhost:3000`;  // specify the start page
 
 
 //then create a test and place your code there
-test('My first test', async t => {
+test('Positive Deobfuscator test', async t => {
 
   const inputText = ReactSelector('input').withProps(
     {automationid: 'text-for-deobf'}
